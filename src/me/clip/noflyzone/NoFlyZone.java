@@ -81,7 +81,10 @@ public class NoFlyZone extends JavaPlugin {
 			return null;
 		}
 		
-		ApplicableRegionSet regions = worldguard.getRegionManager(l.getWorld()).getApplicableRegions(l);
+		RegionManager rm = worldguard.getRegionManager(to.getWorld());
+		//rm.getApplicableRegions(to);
+		
+		ApplicableRegionSet regions = rm.getApplicableRegions(l);
 		
 		if (regions == null) {
 			return null;
